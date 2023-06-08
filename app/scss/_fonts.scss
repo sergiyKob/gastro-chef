@@ -1,0 +1,21 @@
+
+@mixin font-face($font-family, $url, $weight, $style) {
+    @font-face {
+        font-family: "#{$font-family}";
+        src: url("../fonts/#{$url}.woff2") format("woff2"), 
+             url("../fonts/#{$url}.woff") format("woff");
+        font-weight: #{$weight};
+        font-display: swap;
+        font-style: $style;
+    }
+}
+
+@include font-face("Montserrat", "../fonts/Montserrat-Light", 300, normal);
+@include font-face("Montserrat", "../fonts/Montserrat-Regular", 400, normal);
+@include font-face("Montserrat", "../fonts/Montserrat-Medium", 500, normal);
+@include font-face("Montserrat", "../fonts/Montserrat-Bold", 700, normal);
+
+@include font-face("Comfortaa", "../fonts/Comfortaa-Light", 300, normal);
+@include font-face("Comfortaa", "../fonts/Comfortaa-Regular", 400, normal);
+@include font-face("Comfortaa", "../fonts/Comfortaa-Bold", 700, normal);
+

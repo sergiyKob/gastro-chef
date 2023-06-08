@@ -1,0 +1,112 @@
+html {
+   height: 100%;
+}
+
+body {
+   font-family: $font-family;
+   // font-family: "Comfortaa", sans-serif;
+   color: $color;
+   background-color: $background-color;
+   font-size: $font-size;
+   // line-height: $line-height;
+   height: 100%;
+   overflow-x: hidden;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+
+.main {
+   flex: 1 0 auto;
+}
+
+.footer {
+   flex: 0 0 auto;
+}
+
+.container {
+   max-width: $container;
+   padding: $container-padding;
+   margin: 0 auto;
+}
+
+.sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+.lock {
+   overflow: hidden;
+}
+
+.flex {
+   display: flex;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+}
+
+.section {
+   padding: 100px 0;
+}
+
+.title {
+   font-family: "Comfortaa", sans-serif;
+   font-weight: 700;
+   font-size: 30px;
+   line-height: 1.1;
+   color: $dark;
+   text-align: center;
+}
+
+.btn {
+   display: inline-block;
+   background-color: $accent;
+   color: $color-bg;
+   font-size: 26px;
+   padding: 14px 70px;
+   border-radius: 190px;
+   border: 3px solid transparent;
+   box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+   transition: color 0.3s, background-color 0.3s, border 0.3s;
+
+   @include hover {
+      background-color: $color-bg;
+      color: $accent;
+      border: 3px solid $accent;
+   }
+
+   &:active {
+      color: $btn-active;
+      border: 3px solid $btn-active;
+   }
+
+   &--light {
+      background-color: $color-bg;
+      color: $accent;
+      border: 3px solid $accent;
+
+      @include hover {
+         background-color: $accent;
+         color: $color-bg;
+         border: 3px solid transparent;
+      }
+
+      &:active {
+         background-color: $btn-active;
+      }
+   }
+}

@@ -1,0 +1,42 @@
+.tabs {
+   &__list {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 10px;
+   }
+
+   &__item {
+   }
+
+   &__link {
+      border: 1px solid #000000;
+      padding: 5px 10px;
+   }
+
+   &__link--active {
+      background-color: orange;
+   }
+
+   &__content {
+   }
+
+   &__content-item {
+      display: none;
+
+      &.tabs__content-item--active {
+         display: block;
+      }
+   }
+
+   &__content-item--active {
+   }
+
+   &__content-1 {
+   }
+
+   &__content-2 {
+   }
+
+   &__content-3 {
+   }
+}

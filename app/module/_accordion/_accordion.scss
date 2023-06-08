@@ -1,0 +1,46 @@
+.accordion {
+   &__item {
+   }
+
+   &__title {
+      @include flex-sb-center;
+      background-color: green;
+      color: white;
+      border-radius: 10px;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+
+      &.active .accordion__icon {
+         transform: rotate(90deg);
+      }
+
+      @include hover {
+         transform: translateX(7px);
+         background-color: rgba(0, 128, 0, 0.8);
+      }
+
+      &:active {
+         background-color: rgba(0, 128, 0, 0.7);
+      }
+   }
+
+   &__icon {
+      fill: transparent;
+      stroke: #fff;
+      stroke-width: 2;
+      transition: transform 0.3s;
+   }
+
+   &__content {
+      display: none;
+      background-color: #fff;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+   }
+}

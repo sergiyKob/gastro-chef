@@ -1,0 +1,29 @@
+.label-checkbox {
+   position: relative;
+   display: block;
+   padding-left: 32px;
+   cursor: pointer;
+}
+
+.input-checkbox {
+   @include checkbox-hidden;
+
+   &:checked + .checkbox {
+      background-image: url("../images/icons/checked-on.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #3282e4;
+      box-shadow: 0 0 0 2px #3282e4;
+   }
+}
+
+.checkbox {
+   width: 18px;
+   height: 18px;
+   border-radius: 4px;
+   box-shadow: 0 0 0 2px #121;
+   position: absolute;
+   top: 3px;
+   left: 3px;
+   transition: box-shadow 0.2s;
+}
